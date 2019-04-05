@@ -1,0 +1,62 @@
+section {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.seats {
+  text-align: center;
+  width: 40%;
+  margin: 1rem auto;
+  padding: 4rem;
+}
+
+div {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: center;
+}
+
+span {
+  align-self: center;
+  margin: 0.5rem auto 0;
+  padding: 0.3rem;
+  background: #dddddd;
+  color: #000000;
+}
+
+mat-icon {
+  margin: 0.3rem 0.6rem;
+  height: 10px;
+  width: 10px;
+  background-color: #dddddd;
+}
+
+.booked {
+  background: #e67b7b;
+  color: #ffffff;
+}
+
+.user {
+  background: #26afa8;
+}
+
+
+
+@media (max-width: 900px) {
+  section {
+    display: block;
+    padding: 0.5rem;
+  }
+
+  mat-card{
+    width: 50%;
+    margin: auto;
+  }
+
+  .seats {
+    width: 60%;
+  }
+
+}

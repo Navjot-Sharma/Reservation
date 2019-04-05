@@ -1,0 +1,44 @@
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+<section *ngIf="!isLoading">
+  <mat-card>
+    <mat-card-subtitle>
+      Your seat number(s):
+    </mat-card-subtitle>
+    <mat-card-content>
+      {{userSeats}}
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="seats mat-elevation-z10">
+    <mat-card-title>Seats</mat-card-title>
+    <div>
+      <span *ngFor="let item of seatsArr; let id = index"
+       [class.booked]="bookedSeats.includes(id + 1)"
+       [class.user]="userSeats.includes(id + 1)"
+       >
+        {{id + 1 | number: '2.0-0'}}
+      </span>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon class="user"></mat-icon>
+          Your seats
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="booked"></mat-icon>
+          Booked seats
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon></mat-icon>
+          Available seats
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</section>

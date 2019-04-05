@@ -1,6 +1,9 @@
-const app = require('express')();
+const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
+
+const app = express();
 
 const env = require('./environments');
 const reservationRouter = require('./routes/reservations');
@@ -22,6 +25,7 @@ app.use((req, res, next) => {
 
 app.use('/api/reservations',reservationRouter);
 app.use('/api/rows',rowsRouter);
+app.use('/', express.static(path.join(__dirname, 'reservation')));
 
 
 

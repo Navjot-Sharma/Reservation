@@ -1,0 +1,22 @@
+<section>
+  <div>
+    <p>This is just for testing purposes.</p>
+    <button mat-raised-button (click)="onClearAllSeats()">Clear all seats</button>
+  </div>
+  <mat-card class="mat-elevation-z18">
+    <mat-card-title>
+      Enter number of seats to book
+    </mat-card-title>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input type="number" matInput placeholder="Seats" formControlName="seatsReq" />
+        <mat-error *ngIf="form.invalid">
+          Please enter any number from 1 to 7
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" [disabled]="disableButton">
+        Book
+      </button>
+    </form>
+  </mat-card>
+</section>

@@ -1,0 +1,32 @@
+section {
+  padding: 5rem;
+}
+mat-card {
+  max-width: 25rem;
+  margin: auto;
+  text-align: center;
+  padding: 3rem;
+}
+mat-form-field, button {
+  width: 80%;
+  margin: auto;
+}
+mat-card button {
+  width: 40%;
+}
+div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+
+@media (max-width: 725px) {
+  section {
+    padding: 5rem 1rem;
+  }
+  mat-card {
+    padding: 3rem 1rem;
+  }
+}
